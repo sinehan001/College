@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Research - Velammal Engineering College</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .container
+        {
+            background-color: #F6C324;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0px;
+        }
+
+        .colum
+        {
+            margin-top: -10%;
+        }
+        ul 
+        {
+            list-style-type: none;
+            margin-top: -1.2%;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: #f1f1f1;
+        }
+
+        li a 
+        {
+            display: block;
+            color: #666666;
+            text-align: center;
+            font-size: 20px;
+            padding: 14px 22px;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        li a:hover:not(.active)
+        {
+            background-color: #a35709;
+            color: white;
+            font-weight: bold;
+        }
+
+        li a.active 
+        {
+            color: white;
+            background-color: #4CAF50;
+        }
+
+        li button 
+        {
+            display: block;
+            color: #666666;
+            text-align: center;
+            font-size: 20px;
+            padding: 14px 22px;
+            text-decoration: none;
+            font-family: sans-serif;
+            border: 0px;
+        }
+
+        li button:hover:not(.active)
+        {
+            background-color: #a35709;
+            color: white;
+            font-weight: bold;
+        }
+
+        li button.active 
+        {
+            color: white;
+            background-color: #4CAF50;
+        }
+
+        .col2
+        {
+            display: flex;
+        }
+
+        .col21
+        {
+            width: 30%;
+            background-color: #F6C324;
+        }
+
+        .col21 h2
+        {
+            font-family: sans-serif;
+            text-align: center;
+            cursor: default;
+        }
+
+        .col21 hr
+        {
+            height: 3px;
+            background-color: #a35709;
+        }
+
+        .col211
+        {
+            margin-left: 5%;
+        }
+
+        .col211 h4
+        {
+            color: #cc0000;
+            font-family: sans-serif;
+        }
+
+        .col211 a
+        {
+            text-decoration: none;
+            color: #cc0000;
+        }
+
+        .col211 a:hover
+        {
+            text-decoration: underline;
+        }
+
+        .col22
+        {
+            width: 0.4%;
+            background-color: #a35709;
+        }
+
+        .col23
+        {
+            font-family: sans-serif;
+            width: 69.6%;
+            cursor: default;
+        }
+
+        .col231
+        {
+            margin-left: 10%;
+            margin-right: 5%;
+        }
+
+        .col231 h2
+        {
+            color: #a35709;
+        }
+
+        .col231 h4
+        {
+            color: #cc0000;
+            margin-left: 3%;
+        }
+
+        .topnav .icon 
+        {
+          display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav li:not(:first-child) {display: none;}
+          .topnav li.icon {
+            float: right;
+            display: block;
+            position: relative;
+          }
+        }
+
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive li{
+            float: left;
+            display: block;
+            width: 100%;
+            text-align: left;
+          }
+          .icon i
+          {
+            float: right;
+            cursor: pointer;
+            font-size: 24px;
+          }
+        }
+
+        table
+        {
+            margin-left: 2%;
+        }
+
+        table,th,td
+        {
+            border: 3px solid #F6C324;
+            border-collapse: collapse;
+        }
+
+        th,td
+        {
+            text-align: center;
+            padding: 20px 20px;
+        }
+
+        th
+        {
+            background-color: green;
+            color: white;
+        }
+
+        td
+        {
+            background-color: #a35709;
+            color: white;
+        }
+
+        .foot
+        {
+            background-color: #F6C324;
+            padding-bottom: 1%;
+            margin-bottom: -1%;
+            text-align: center;
+            color: #cc0000;
+            font-weight: bold;
+        }
+
+        .foot h2
+        {
+            cursor: default;
+        }
+
+        .foot h2 a
+        {
+            text-decoration: none;
+            color: #cc0000;
+        }
+
+        .foot h2 a:hover
+        {
+            text-decoration: underline;
+        }
+
+        .fa 
+        {
+            padding: 15px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+
+        .fa:hover 
+        {
+            opacity: 0.8;
+        }
+
+        .fa-facebook 
+        {
+            background: #3B5998;
+            color: white;
+            margin-right: 1%;
+        }
+
+        .fa-google 
+        {
+           background: #dd4b39;
+           color: white;
+           margin-right: 1%;
+        }
+
+        .fa-linkedin 
+        {
+           background: #007bb5;
+           color: white;
+           margin-right: 1%;
+        }
+        
+        .fa-youtube 
+        {
+           background: #bb0000;
+           color: white;
+           margin-right: 1%;
+        }
+
+        .fa-instagram 
+        {
+           background: #125688;
+           color: white;
+           margin-right: 1%;
+        }
+
+
+    @media only screen and (max-width: 1205px)
+    {
+        .container
+        {
+            position: static;
+            position: -webkit-static;
+        }
+        .column img
+        {
+            width: 15%;
+        }
+
+        .column
+        {
+            padding-left: 25%;
+        }
+
+        .colum
+        {
+            margin-top: -2%;
+        }
+    }
+
+    @media only screen and (max-width: 600px)
+    {
+        .column img 
+        {
+            width: 25%;
+        }
+
+        th,td 
+        {
+            padding: 0px;
+        }
+
+        .col231
+        {
+            margin-left: 3%;
+        }
+
+        .col232 
+        {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    </style>
+
+</head>
+<body style="margin: 0px; overflow-x: hidden;">
+    <div class="container">
+        <div class="column">
+            <img src="logo.png" style="padding-left: 25%; padding-top: 1.5%;" width="7%" alt="VEC Logo">
+        </div>
+        <div class="colum" style="cursor: default;">
+            <h1 style="color: #a35709; text-align: center; font-weight: bold; padding-top: 1%;">Velammal Engineering College</h1>
+            <h3 style="color: white; text-align: center; font-family: sans-serif; margin: -1.35%;"><em>The Wheel of Knowledge rolls on!</em></h3>
+            <h3 style="color: white; text-align: center; font-family: sans-serif;">(An Autonomous Institution)</h3>
+            <h3 style="color: white; text-align: center; font-family: sans-serif; margin-top: -1%;">Affilliated to Anna University, Chennai</h3>
+            <h3 style="color: white; text-align: center; font-family: sans-serif;margin-top: -1%; padding-bottom: 1%;">& Approved by AICTE, New Delhi</h3>
+        </div>
+    <ul class="topnav" id="myTopnav">
+        <li style="float: left;" class="active"><a href="index.html">Home</a></li>
+        <li style="float: left;"><a href="college.html">College</a></li>
+        <li style="float: left;"><a href="academics.html">Academics</a></li>
+        <li style="float: left;"><a href="COE.html">COE</a></li>
+        <li style="float: left;"><a href="research.html">Research</a></li>
+        <li style="float: left;"><a href="placement.html">Placement</a></li>
+        <li style="float: left;"><a href="services.html">Services</a></li>
+        <li style="float: left;"><a href="alumni.html">Alumni</a></li>
+        <li style="float: left;"><a href="gallery.html">Gallery</a></li>
+        <li style="float: left;"><a href="studlog.html">Student Login</a></li>
+        <li style="float: left;"><a href="contact.html">Contact Us</a></li>
+        <li style="float: left;"><a href="about.html">About</a></li>
+        <li href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+        </li>
+    </ul>
+</div>
+<div class="col2">
+    <div class="col21">
+        <hr style="margin-top: -0.5%; width: 101.1%;">
+        <h2>&#8987; Co-Curricular</h2>
+        <hr>
+        <div class="col211">
+           <h4><span>&#9672;</span>&nbsp;&nbsp;&nbsp;<a href="research.html" target="_blank">R&D Activities</a></h4>
+           <h4><span>&#9672;</span>&nbsp;&nbsp;&nbsp;<a href="publication.html">Publications</a></h4>
+           <h4><span>&#9672;</span>&nbsp;&nbsp;&nbsp;<a href="gallery.html">Events Gallery</a></h4>
+        </div>
+    </div>
+    <div class="col22"></div>
+    <div class="col23">
+        <div class="col231">
+            <h2 style="text-align: center;">&#128269; <span style="text-decoration: underline; text-decoration-style: double;">Research & Development Activities</span></h2><br>
+            <h3>Department of Computer Science and Engineering :</h3> 
+            <h4>&#10029;&nbsp; <span>The Department has been in the forefront of establishment of the TIFAC-CORE on pervasive computing technologies at a cost of Rs. 5.14 crores in the college. One Asst.     Professor and 2 Lecturers have been deputed from the department to work in the CORE.</span></h4>
+            <h4>&#10029;&nbsp;<span>The department has received a funding grant of Rs. 2.01 Lakhs from Tamil Virtual University for a project titled "Language Localization for Tamil in Mobile Phones".</span></h4>
+            <h4>&#10029;&nbsp;<span>A project titled "Predictive texting in mobile phones" with a funding grant of Rs. 2.15 Lakhs is under consideration in Tamil Virtual University.</span></h4> 
+            <h4>&#10029;&nbsp;<span>The Department is in collaboration in the computational studies aspect in a project prepared by Chemistry Department which is under consideration by Indian Council for Medical Research.</span></h4> 
+            <h4>&#10029;&nbsp;<span>A staff student team of the Department has won the second prize in the State level Project competition conducted under the auspices of kanithamizh sangam</span></h4>  
+            <br>
+            <h3>Department of TIFAC-CORE IN PERVASIVE COMPUTING TECHNOLOGIES :</h3>
+            <h4>&#10029;&nbsp;<span>Velammal Engineering College (VEC) signed an MOU with Technology Information Forecasting and Assessment Council (TIFAC) on September 23 2005 to create a Centre of Relevance and  Excellence (CORE) in Pervasive Computing Technologies. With this, VEC joins an exclusive club of 25 other top institutions who have created COREs in various domains.</span></h4>
+            <br>
+            <h3>Department of Chemistry :</h3>
+            <table>
+                <tr>
+                    <th>Project Name</th>
+                    <td>“Large Scale Preparation of Thermo Luminescent Phosphors for Medical Dosimetry”</td>
+                </tr>
+                <tr>
+                    <th>Amount</th>
+                    <td>Rs 46.5 lakhs</td>
+                </tr>
+                <tr>
+                    <th>Sponsoring Agency</th>
+                    <td>DAE</td>
+                </tr>
+                <tr>
+                    <th>Investigators</th>
+                    <td>Dr. Vidyavathy Balraj, Department of Chemistry</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>Ongoing</td>
+                </tr>
+            </table>
+            <br>
+            <h3>Department of Physics :</h3>
+            <h3 style="text-align: center; color: black;">Sponsered Research Projects</h3>
+            <table>
+                <tr>
+                    <th>Project Name</th>
+                    <td>"Growth and characterization of nonlinear optical materials - Zinc thiourea  chloride and Zinc thiourea sulphide"</td>
+                </tr>
+                <tr>
+                    <th>Amount</th>
+                    <td>Rs 5.25 lakhs</td>
+                </tr>
+                <tr>
+                    <th>Sponsoring Agency</th>
+                    <td>CSIR</td>
+                </tr>
+                <tr>
+                    <th>Investigators</th>
+                    <td>Dr. P.Sureshkumar & Dr. M.Rathnakumari</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>Completed</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <th>Project Name</th>
+                    <td>"Growth and characterization of KTP (Potassium Titanile phosphate)  Crystals for OPO-LIDAR applications"</td>
+                </tr>
+                <tr>
+                    <th>Amount</th>
+                    <td>Rs 14.56 lakhs</td>
+                </tr>
+                <tr>
+                    <th>Sponsoring Agency</th>
+                    <td>DRDO</td>
+                </tr>
+                <tr>
+                    <th>Investigators</th>
+                    <td>Dr. P.Sureshkumar & Dr. M.Rathnakumari</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>Ongoing</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <th>Project Name</th>
+                    <td>"Growth of 4-N, N-dimethylamino-4'-N'- Methyl-4-stilbazolium tosylate (DAST)
+                    Organic single Crystals suitable for Electro Optic sensors and to generate Tera Hertz waves"</td>
+                </tr>
+                <tr>
+                    <th>Amount</th>
+                    <td>Rs 13.99 lakhss</td>
+                </tr>
+                <tr>
+                    <th>Sponsoring Agency</th>
+                    <td>DST</td>
+                </tr>
+                <tr>
+                    <th>Investigators</th>
+                    <td>Dr. P.Sureshkumar & Dr. M.Rathnakumari</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>Ongoing</td>
+                </tr>
+            </table>
+            <br>
+            <h3>Department of Electronics and Instrumentation Engineering :</h3>
+            <table>
+                <tr>
+                    <th>Project Name</th>
+                    <td>"Growth and characterization of KTP (Potassium Titanile phosphate)  Crystals for OPO-LIDAR applications"</td>
+                </tr>
+                <tr>
+                    <th>Amount</th>
+                    <td>Rs 14.56 lakhs</td>
+                </tr>
+                <tr>
+                    <th>Sponsoring Agency</th>
+                    <td>DRDO</td>
+                </tr>
+                <tr>
+                    <th>Investigators</th>
+                    <td>Dr. P.Sureshkumar & Dr. M.Rathnakumari</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>Ongoing</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <th>Project Name</th>
+                    <td>"Automation of Low Pressure Die Casting Furnace"</td>
+                </tr>
+                <tr>
+                    <th>Place</th>
+                    <td>Regional Research Laboratory (RRL), Kerala.s</td>
+                </tr>
+                <tr>
+                    <th>Team</th>
+                    <td>Students of Final Year</td>
+                </tr>
+                <tr>
+                    <th>Guidance</th>
+                    <td>Prof M.Devaraju & Mr.L.Jayaraji</td>
+                </tr>
+            </table>
+            <br>
+            <h3>Publications from June 2006 Onwards</h3>
+            <h3>(Published / Under review / Proposed to be given seperately)</h3>
+            <h3>Paper Published / Presented</h3>
+            <br>
+            <table class="col232" style="padding: 0px 0px;">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Title of Paper</th>
+                    <th>Author's Name(s)</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Growth and characterization of a new nonlinear optical crystal tris allythiourea mercuric chloride (ATMC)</td>
+                    <td>P. Suresh kumar, M. Rathna kumari, R. Siddhes waran</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nucleation, Growth and characterization of a nonlinear optical crystal tris allythiourea cadmium chloride (ATCC)</td>
+                    <td>P. Suresh kumar, M. Rathna kumari, R. Siddhes waran</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Growth and optical properties of a new semi - organic non-linear optical mixed crystal L-arginine hydrochlorofluride (LAHCIF)</td>
+                    <td>P. Suresh kumar, M. Rathna kumari, R. Siddhes waran</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Comparative study of SPM concentration in Industrial area and at traffic intersections in Chennai city</td>
+                    <td>T. Senthil Nathan</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Analysis of concentration of air pollutants and air quality index levels in ambient air in Chennai city</td>
+                    <td>T. Senthil Nathan</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Satellite communication networks for air quality index forecaster</td>
+                    <td>T. Senthil Nathan</td>
+                </tr>
+            </table>
+            <br>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <span><hr style="height: 3px; margin-top: 0%; background-color: #a35709;"></span>
+    <h2>Follow Us!</h2>
+    <a href="https://www.facebook.com/velammalengineeringcollege" target="_blank" class="fa fa-facebook"></a>
+    <a href="http://www.velammal.edu.in" target="_blank" class="fa fa-google"></a>
+    <a href="https://www.linkedin.com/school/velammal-engineering-college/" target="_blank" class="fa fa-linkedin"></a>
+    <a href="https://www.youtube.com/channel/UC10EVvADTccFuSu2hGrH9vw/" target="_blank" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/vecchennai/" target="_blank" class="fa fa-instagram"></a>
+    <h2>Registered &#174; 2021 Velammal Engineering College. All Rights Reserved. Powered By <a href="http://sbmhss.000webhostapp.com">Sinehan.</a></h2>
+</div>
+<script>
+  function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
